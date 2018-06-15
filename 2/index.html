@@ -14,6 +14,30 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
     <title></title>
   </head>
   <body>
+  	<img src="https://source.unsplash.com/random/800x600/?dog,cat" alt="foto1">
+     <img src="https://source.unsplash.com/random/800x400" alt="foto1">
+     <img src="https://source.unsplash.com/random/800x200" alt="foto1">
+     <img src="https://source.unsplash.com/random/800x400" alt="foto1">
+     <img src="https://source.unsplash.com/random/800x200" alt="foto1">
+     <img src="https://source.unsplash.com/random/800x600" alt="foto1">
+     <img src="https://source.unsplash.com/random/800x400" alt="foto1">
+     <img src="https://source.unsplash.com/random/800x400" alt="foto1">
+     <img src="https://source.unsplash.com/random/800x300" alt="foto1">
+     <img src="https://source.unsplash.com/random/800x500" alt="foto1">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			//aqui van mis imagenes
+			$("img").css("filter" , "grayscale(100%)");
+      $("img").css("transition" , "all 1s");
 
+			$("img").click(function(evt){
+				console.log(evt.currentTarget);
+        $("img").css("filter" , "grayscale(100%)");
+				$(evt.currentTarget).css("filter" , "grayscale(0%)");
+				
+			})
+		})
+	</script>
   </body>
 </html>
